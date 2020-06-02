@@ -1,2 +1,0 @@
-(this.webpackJsonpreact_tabs=this.webpackJsonpreact_tabs||[]).push([[0],{3:function(t,e,n){t.exports=n(9)},8:function(t,e,n){},9:function(t,e,n){"use strict";n.r(e);var a=n(0),r=n.n(a),c=n(2),s=n.n(c),o=(n(8),function(){return r.a.createElement("div",null,"sadfasd")});s.a.render(r.a.createElement(o,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.9935e02a.chunk.js.map

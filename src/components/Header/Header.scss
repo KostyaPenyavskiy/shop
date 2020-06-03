@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  padding-top: 21px;
+
+  &__logo-link {
+    margin: 0 auto;
+  }
+
+  &__cart {
+    float: right;
+  }
+}
+
+.cart-counter {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}

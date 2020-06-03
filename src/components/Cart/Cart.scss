@@ -1,0 +1,139 @@
+.cart {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  background-color: #2B2B2B;
+  height: 100vh;
+  width: 340px;
+  transition: 0.3s;
+
+  &-hidden {
+    transform: translateX(400px);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    margin-top: 44px;
+    margin-right: 37px;
+  }
+
+  &__label {
+    margin-bottom: 83px;
+
+     &::before,
+     &::after {
+       content: "";
+       position: relative;
+       display: block;
+       width: 19px;
+       background-color: white;
+       border: 1px solid #FFFFFF;
+     }
+
+     &::before {
+      top: -1px;
+      right: -300px;
+      transform: rotate(-45deg);
+     }
+
+     &::after {
+       top: -3px;
+       right: -300px;
+       transform: rotate(45deg);
+     }
+  }
+
+  &__total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+  }
+
+  &__buy {
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    height: 62px;
+    line-height: 31px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #2B2B2B;
+    color: white;
+    border: 2px solid #FFFFFF;
+  }
+
+  &__empty {
+    color: white;
+    text-align: center;
+  }
+}
+
+.item-card {
+  display: flex;
+  padding-top: 19px;
+  padding-left: 39px;
+  padding-bottom: 19px;
+  width: 100%;
+  border-bottom: 1px solid #424242;
+  color: white;
+
+  & img {
+    width: 83px;
+    height: 100px;
+    margin-right: 17px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 155px;
+    flex-wrap: wrap;
+  }
+}
+
+.info__title {
+  width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.info__price,
+.info__quantity {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.increase {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 9px;
+}
+
+.decrease {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 9px;
+}

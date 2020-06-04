@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { switchCart, addQuantity, subtractQuantity } from '../../store/actions/cartActions';
+import {
+  switchCart,
+  addQuantity,
+  subtractQuantity
+} from '../../store/actions/cartActions';
 import './Cart.scss';
 
 export const Cart = () => {
@@ -73,7 +77,9 @@ export const Cart = () => {
           <p>Итого</p>
           <p>
             $
-            {cartItems.reduce((accum, current) => accum + (current.quantity * current.price), 0) || 0}
+            {cartItems.reduce(
+              (accum, current) => accum + (current.quantity * current.price), 0)
+            || 0}
           </p>
         </div>
       </div>

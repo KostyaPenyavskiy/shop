@@ -19,6 +19,7 @@ export const Home = () => {
           <div
             className="product-card__img"
             style={{ backgroundImage: `url(${item.images[item.selectedImg]}` }}
+            onClick={() => dispatch(addToCart(item.id))}
           />
           <div className="product-card__slider-isVisible product-card__slider">
             {item.images.map((img, i) => (
@@ -30,16 +31,14 @@ export const Home = () => {
               />
             ))}
           </div>
-          <div className="product-card__info">
+          <div className="product-card__info" onClick={() => dispatch(addToCart(item.id))}>
             <p className="section">{item.section}</p>
             <p className="title">{item.title}</p>
             <button
               type="button"
               className="price"
-              onClick={() => dispatch(addToCart(item.id))}
             >
-              $
-              {item.price}
+              <span>${item.price}</span>
             </button>
             <p className="count">{`На складе:${item.count}`}</p>
           </div>

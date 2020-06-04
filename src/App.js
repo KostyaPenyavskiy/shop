@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import { Route } from 'react-router';
 import { Provider } from 'react-redux';
 import { store } from './store/index';
 

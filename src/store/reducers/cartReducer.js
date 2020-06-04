@@ -1,4 +1,13 @@
-import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, SELECTED_IMG, SWITCH_CART } from '../actions/actionsType';
+import {
+  ADD_TO_CART,
+  REMOVE_ITEM,
+  SUB_QUANTITY,
+  ADD_QUANTITY,
+  SELECTED_IMG,
+  SWITCH_CART,
+  SORT_ASC_TO_DESC,
+  SORT_DESC_TO_ASC,
+} from '../actions/actionsType';
 
 const initialState = {
   items: [
@@ -105,6 +114,17 @@ const initialState = {
 
 export const cartReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SORT_ASC_TO_DESC:
+      return {
+        ...state,
+        items: [...state.items].sort((a, b) => b.price - a.price),
+      };
+
+    case SORT_DESC_TO_ASC:
+      return {
+        ...state,
+        items: [...state.items].sort((a, b) => a.price - b.price),
+      };
     case REMOVE_ITEM:
 
       return {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Header.scss';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { switchCart } from '../../store/actions/cartActions';
 
@@ -10,22 +9,24 @@ export const Header = () => {
   const dispatch = useDispatch();
   const [itemsQuantity, setItemsQuantity] = useState(0);
 
-  const handleClick = () => {
+  const handleCartClick = () => {
     dispatch(switchCart(cartToggler));
   };
 
   useEffect(() => {
-    setItemsQuantity(cartItems.reduce((accum, current) => accum + current.quantity, 0));
+    setItemsQuantity(
+      cartItems.reduce((accum, current) => accum + current.quantity, 0)
+    );
   }, [cartItems]);
 
   return (
     <header className="header">
-      <Link to="/Home" className="header__logo-link">
+      <a className="header__logo-link">
         <img src="./images/logo.svg" alt="logo" />
-      </Link>
-      <Link to="/Home" className="header__cart" onClick={() => handleClick()}>
+      </a>
+      <a className="header__cart" onClick={() => handleCartClick()}>
         <img src="./images/cart.svg" alt="logo" />
-      </Link>
+      </a>
       {cartItems.length > 0
         ? (
           <div className="cart-counter">

@@ -14,22 +14,30 @@
     z-index: 0;
 
     &-field {
+      cursor: pointer;
       font-size: 14px;
       line-height: 16px;
       text-align: right;
       letter-spacing: 0.7px;
+
+      &:hover {
+        font-weight: 400;
+      }
     }
   }
 
   &__sort-toggle {
     position: relative;
-
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.7px;
     background-color: white;
     z-index: 2;
 
+    &:hover {
+      font-weight: 400;
+    }
+    
     &::after {
       content: '';
       position: relative;

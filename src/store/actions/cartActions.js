@@ -1,4 +1,21 @@
-import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, SELECTED_IMG, SWITCH_CART } from './actionsType';
+import {
+  ADD_TO_CART,
+  REMOVE_ITEM,
+  SUB_QUANTITY,
+  ADD_QUANTITY,
+  SELECTED_IMG,
+  SWITCH_CART,
+  SORT_ASC_TO_DESC,
+  SORT_DESC_TO_ASC,
+} from './actionsType';
+
+export const sortAsc = () => ({
+  type: SORT_DESC_TO_ASC,
+});
+
+export const sortDesc = () => ({
+  type: SORT_ASC_TO_DESC,
+});
 
 export const addToCart = id => ({
   type: ADD_TO_CART,

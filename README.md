@@ -1,5 +1,5 @@
 [Preview](https://kostyapenyavskiy.github.io/shop/)
 
 ### Technologies:
-...React+Redux
+⋅⋅⋅React+Redux
 ...HTML, SCSS

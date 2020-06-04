@@ -11,27 +11,27 @@ export const SideBar = () => {
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="/">
+            <a href="#">
               Все
             </a>
           </li>
           <li className="nav__item">
-            <a href="/">
+            <a href="#">
               Плащи
             </a>
           </li>
           <li className="nav__item">
-            <a href="/">
+            <a href="#">
               Кроссовки
             </a>
           </li>
           <li className="nav__item">
-            <a href="/">
+            <a href="#">
               Рубашки
             </a>
           </li>
           <li className="nav__item">
-            <a href="/">
+            <a href="#">
               Брюки
             </a>
           </li>
